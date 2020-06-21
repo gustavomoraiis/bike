@@ -117,17 +117,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jTbPainel" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" min="-2" pref="320" max="-2" attributes="0"/>
+          <Component id="jTbPainel" min="-2" pref="320" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+    <Container class="javax.swing.JTabbedPane" name="jTbPainel">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -163,15 +163,15 @@
                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTLogradouroCliente2" alignment="0" pref="375" max="32767" attributes="0"/>
+                                      <Component id="jTFLogradouroCliente2" alignment="0" pref="375" max="32767" attributes="0"/>
                                       <Component id="jTNomeCliente" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTCodigoCliente1" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="jTFCodigoCliente1" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTCPFCliente4" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="jTFCPFCliente4" min="-2" pref="160" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -190,7 +190,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTCodigoCliente1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTFCodigoCliente1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -199,7 +199,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTNomeCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTCPFCliente4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTFCPFCliente4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -208,7 +208,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTLogradouroCliente2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTFLogradouroCliente2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTFoneCliente3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="65" max="32767" attributes="0"/>
@@ -277,14 +277,14 @@
                 <Property name="text" type="java.lang.String" value="Nome"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTCodigoCliente1">
+            <Component class="javax.swing.JTextField" name="jTFCodigoCliente1">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="CPF"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTLogradouroCliente2">
+            <Component class="javax.swing.JTextField" name="jTFLogradouroCliente2">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -298,7 +298,7 @@
                 <Property name="text" type="java.lang.String" value="Telefone"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTCPFCliente4">
+            <Component class="javax.swing.JTextField" name="jTFCPFCliente4">
             </Component>
           </SubComponents>
         </Container>
@@ -318,9 +318,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jCTipo" min="-2" pref="113" max="-2" attributes="0"/>
+                              <Component id="jCbTipo" min="-2" pref="113" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTPesquisarCliente" min="-2" pref="363" max="-2" attributes="0"/>
+                              <Component id="jTFPesquisarCliente" min="-2" pref="363" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jBPesquisarCliente" min="-2" pref="112" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="68" max="32767" attributes="0"/>
@@ -342,9 +342,9 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTPesquisarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTFPesquisarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBPesquisarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCTipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCbTipo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="159" max="-2" attributes="0"/>
@@ -366,7 +366,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="jTConsCliente">
+                <Component class="javax.swing.JTable" name="jTbConsulta">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="5" rowCount="4">
@@ -394,9 +394,9 @@
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTPesquisarCliente">
+            <Component class="javax.swing.JTextField" name="jTFPesquisarCliente">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTPesquisarClienteActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTFPesquisarClienteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBPesquisarCliente">
@@ -407,7 +407,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBPesquisarClienteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jCTipo">
+            <Component class="javax.swing.JComboBox" name="jCbTipo">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="6">
@@ -420,6 +420,9 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCbTipoActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
