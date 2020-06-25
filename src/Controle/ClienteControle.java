@@ -69,14 +69,14 @@ public class ClienteControle extends ConexaoPostgress {
         sql.append("INSERT INTO cad_pessoa (");
         sql.append("id_pessoa,");
         sql.append("nome,");
-        sql.append("cpf");
-        sql.append("logradouro");
+        sql.append("cpf,");
+        sql.append("logradouro,");
         sql.append("fone");
         sql.append(") VALUES (");
         sql.append(cliente.getIdpessoa()).append(",'");
         sql.append(cliente.getNome()).append("','");
-        sql.append(cliente.getCpf()).append("')");
-        sql.append(cliente.getLogradouro()).append("')");
+        sql.append(cliente.getCpf()).append("','");
+        sql.append(cliente.getLogradouro()).append("','");
         sql.append(cliente.getFone()).append("')");
         super.atualizarSQL(sql.toString());
     }
@@ -85,8 +85,8 @@ public class ClienteControle extends ConexaoPostgress {
         sql.delete(0, sql.length());
         sql.append("UPDATE cad_pessoa SET ");
         sql.append("nome = '").append(cliente.getNome()).append("', ");
-        sql.append("cpf = '").append(cliente.getCpf()).append("' ");
-        sql.append("logradouro = '").append(cliente.getLogradouro()).append("' ");
+        sql.append("cpf = '").append(cliente.getCpf()).append("', ");
+        sql.append("logradouro = '").append(cliente.getLogradouro()).append("', ");
         sql.append("fone = '").append(cliente.getFone()).append("' ");
         sql.append(" WHERE ");
         sql.append("id_pessoa = ").append(cliente.getIdpessoa());

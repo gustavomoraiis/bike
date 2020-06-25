@@ -380,7 +380,27 @@ public class Cliente extends javax.swing.JFrame {
         setBounds(0, 0, 709, 380);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbPesquisaActionPerformed(java.awt.event.ActionEvent evt) {                                           
+                                           
+
+
+    private void jMenuSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuSairMouseClicked
+        dispose();
+    }//GEN-LAST:event_jMenuSairMouseClicked
+
+    private void jMenuItemProdutoConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoConsultaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemProdutoConsultaActionPerformed
+
+    private void jBSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSelecionarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBSelecionarActionPerformed
+
+    private void jTFPesquisarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFPesquisarClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFPesquisarClienteActionPerformed
+
+    private void jBPesquisarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPesquisarClienteActionPerformed
+        // TODO add your handling code here:BOTAO PESQUISA
         preencher.FormatarJtable(jTbConsulta, new int[]{150, 150, 50, 200, 50});
 
         switch (jCbTipo.getSelectedIndex()) {
@@ -389,7 +409,7 @@ public class Cliente extends javax.swing.JFrame {
                         new String[]{"id_pessoa", "nome", "cpf", "logradouro", "fone"},
                         daocliente.consultageral());
                 break;
-            }
+            } 
             case 1: {
                 modcliente.setIdpessoa(Integer.parseInt(jTFPesquisarCliente.getText()));
                 preencher.PreencherJtableGenerico(jTbConsulta,
@@ -426,29 +446,6 @@ public class Cliente extends javax.swing.JFrame {
                 break;
             }
         }
-
-
-    }                                          
-
-
-    private void jMenuSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuSairMouseClicked
-        dispose();
-    }//GEN-LAST:event_jMenuSairMouseClicked
-
-    private void jMenuItemProdutoConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoConsultaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemProdutoConsultaActionPerformed
-
-    private void jBSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSelecionarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBSelecionarActionPerformed
-
-    private void jTFPesquisarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFPesquisarClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTFPesquisarClienteActionPerformed
-
-    private void jBPesquisarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPesquisarClienteActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jBPesquisarClienteActionPerformed
 
     private void jCbTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbTipoActionPerformed
