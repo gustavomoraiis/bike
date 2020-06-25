@@ -41,7 +41,7 @@ public class Cliente extends javax.swing.JFrame {
     
     public Cliente() {
         initComponents();
-        
+        estadobotoes(0);
        /* setExtendedState(MAXIMIZED_BOTH); */
     }
 
@@ -65,15 +65,15 @@ public class Cliente extends javax.swing.JFrame {
         jBGravar = new javax.swing.JButton();
         jBCancelar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTNomeCliente = new javax.swing.JTextField();
+        jTFNomeCliente = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTFCodigoCliente1 = new javax.swing.JTextField();
+        jTFCodigoCliente = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTFLogradouroCliente2 = new javax.swing.JTextField();
+        jTFLogradouroCliente = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTFoneCliente3 = new javax.swing.JTextField();
+        jTFFoneCliente = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTFCPFCliente4 = new javax.swing.JTextField();
+        jTFCPFCliente = new javax.swing.JTextField();
         jPanelConsulta = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTbConsulta = new javax.swing.JTable();
@@ -114,18 +114,43 @@ public class Cliente extends javax.swing.JFrame {
 
         jBNovo.setText("Novo");
         jBNovo.setPreferredSize(new java.awt.Dimension(75, 30));
+        jBNovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNovoActionPerformed(evt);
+            }
+        });
 
         jBAlterar.setText("Alterar");
         jBAlterar.setPreferredSize(new java.awt.Dimension(75, 30));
+        jBAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAlterarActionPerformed(evt);
+            }
+        });
 
         jBExcluir.setText("Excluir");
         jBExcluir.setPreferredSize(new java.awt.Dimension(75, 30));
+        jBExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBExcluirActionPerformed(evt);
+            }
+        });
 
         jBGravar.setText("Gravar");
         jBGravar.setPreferredSize(new java.awt.Dimension(75, 30));
+        jBGravar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBGravarActionPerformed(evt);
+            }
+        });
 
         jBCancelar.setText("Cancelar");
         jBCancelar.setPreferredSize(new java.awt.Dimension(75, 30));
+        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCancelarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Código");
 
@@ -160,17 +185,17 @@ public class Cliente extends javax.swing.JFrame {
                             .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel2)
                                 .addComponent(jLabel4)
-                                .addComponent(jTFLogradouroCliente2, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
-                                .addComponent(jTNomeCliente))
+                                .addComponent(jTFLogradouroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
+                                .addComponent(jTFNomeCliente))
                             .addComponent(jLabel1)
-                            .addComponent(jTFCodigoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTFCodigoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 39, 39)
                         .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTFCPFCliente4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTFCPFCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel5)
                                 .addComponent(jLabel3)
-                                .addComponent(jTFoneCliente3)))))
+                                .addComponent(jTFFoneCliente)))))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
         jPanelCadastroLayout.setVerticalGroup(
@@ -179,23 +204,23 @@ public class Cliente extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFCodigoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTFCodigoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFCPFCliente4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTFNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTFCPFCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFLogradouroCliente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFoneCliente3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTFLogradouroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTFFoneCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBGravar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -430,6 +455,53 @@ public class Cliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCbTipoActionPerformed
 
+    private void jBNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNovoActionPerformed
+        estado = Rotinas.INCLUIR;
+        estadobotoes (1);
+    }//GEN-LAST:event_jBNovoActionPerformed
+
+    private void jBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlterarActionPerformed
+        estado = Rotinas.ALTERAR;
+        estadobotoes (1);
+    }//GEN-LAST:event_jBAlterarActionPerformed
+
+    private void jBExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExcluirActionPerformed
+                if (jTFNomeCliente.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Selecione um registro a ser excluido");
+            return;
+        } else {
+            setcomp();
+            daocliente.excluir(modcliente);
+            jTFCodigoCliente.setText("");
+            jTFNomeCliente.setText("");
+            jTFCPFCliente.setText("");
+            jTFLogradouroCliente.setText("");
+            jTFFoneCliente.setText("");
+        }
+    }//GEN-LAST:event_jBExcluirActionPerformed
+
+    private void jBGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGravarActionPerformed
+        if (jTFNomeCliente.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Descrição Obrigatoria");
+            jTFNomeCliente.grabFocus();
+            return;
+        } else {
+
+            setcomp();
+            if (estado == Rotinas.INCLUIR) {
+                daocliente.incluir(modcliente);
+            } else if (estado == Rotinas.ALTERAR) {
+                daocliente.alterar(modcliente);
+            }
+            getcomp();
+            estadobotoes(0);
+        }
+    }//GEN-LAST:event_jBGravarActionPerformed
+
+    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+       estadobotoes(0);
+    }//GEN-LAST:event_jBCancelarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -495,13 +567,59 @@ public class Cliente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelCadastro;
     private javax.swing.JPanel jPanelConsulta;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTFCPFCliente4;
-    private javax.swing.JTextField jTFCodigoCliente1;
-    private javax.swing.JTextField jTFLogradouroCliente2;
+    private javax.swing.JTextField jTFCPFCliente;
+    private javax.swing.JTextField jTFCodigoCliente;
+    private javax.swing.JTextField jTFFoneCliente;
+    private javax.swing.JTextField jTFLogradouroCliente;
+    private javax.swing.JTextField jTFNomeCliente;
     private javax.swing.JTextField jTFPesquisarCliente;
-    private javax.swing.JTextField jTFoneCliente3;
-    private javax.swing.JTextField jTNomeCliente;
     private javax.swing.JTable jTbConsulta;
     private javax.swing.JTabbedPane jTbPainel;
     // End of variables declaration//GEN-END:variables
+  
+    
+    
+    public void estadobotoes(int situacao) { // 0 - normal, 1 inclusao
+        if (situacao == 0) {
+            jBNovo.setEnabled(true);
+            jBAlterar.setEnabled(true);
+            jBExcluir.setEnabled(true);
+            jBGravar.setEnabled(false);
+            jBCancelar.setEnabled(false);
+        } else {
+            jBNovo.setEnabled(false);
+            jBAlterar.setEnabled(false);
+            jBExcluir.setEnabled(false);
+            jBGravar.setEnabled(true);
+            jBCancelar.setEnabled(true);
+        }
+    }
+
+    public void setcomp() {
+        if (estado == Rotinas.ALTERAR) {
+            modcliente.setIdpessoa(Integer.parseInt(jTFCodigoCliente.getText()));
+        }
+        modcliente.setNome(jTFNomeCliente.getText());
+        modcliente.setCpf(jTFCPFCliente.getText());
+        modcliente.setLogradouro(jTFLogradouroCliente.getText());
+        modcliente.setFone(jTFFoneCliente.getText());
+       
+    }
+
+    public void getcomp() {
+        jTFCodigoCliente.setText(Integer.toString(modcliente.getIdpessoa()));
+        jTFNomeCliente.setText(modcliente.getNome());
+        jTFCPFCliente.setText(modcliente.getCpf());
+        jTFLogradouroCliente.setText(modcliente.getLogradouro());
+        jTFFoneCliente.setText(modcliente.getFone());
+    }
+
 }
+
+
+
+
+
+
+
+

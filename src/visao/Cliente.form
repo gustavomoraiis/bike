@@ -163,19 +163,19 @@
                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTFLogradouroCliente2" alignment="0" pref="375" max="32767" attributes="0"/>
-                                      <Component id="jTNomeCliente" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTFLogradouroCliente" alignment="0" pref="375" max="32767" attributes="0"/>
+                                      <Component id="jTFNomeCliente" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTFCodigoCliente1" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="jTFCodigoCliente" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTFCPFCliente4" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="jTFCPFCliente" min="-2" pref="160" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTFoneCliente3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTFFoneCliente" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -190,7 +190,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTFCodigoCliente1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTFCodigoCliente" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -198,8 +198,8 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTNomeCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTFCPFCliente4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTFNomeCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTFCPFCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -208,8 +208,8 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTFLogradouroCliente2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTFoneCliente3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTFLogradouroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTFFoneCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="65" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -232,6 +232,9 @@
                   <Dimension value="[75, 30]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNovoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBAlterar">
               <Properties>
@@ -240,6 +243,9 @@
                   <Dimension value="[75, 30]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBAlterarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBExcluir">
               <Properties>
@@ -248,6 +254,9 @@
                   <Dimension value="[75, 30]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBExcluirActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBGravar">
               <Properties>
@@ -256,6 +265,9 @@
                   <Dimension value="[75, 30]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBGravarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jBCancelar">
               <Properties>
@@ -264,41 +276,44 @@
                   <Dimension value="[75, 30]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBCancelarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="C&#xf3;digo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTNomeCliente">
+            <Component class="javax.swing.JTextField" name="jTFNomeCliente">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nome"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTFCodigoCliente1">
+            <Component class="javax.swing.JTextField" name="jTFCodigoCliente">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="CPF"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTFLogradouroCliente2">
+            <Component class="javax.swing.JTextField" name="jTFLogradouroCliente">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Logradouro"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTFoneCliente3">
+            <Component class="javax.swing.JTextField" name="jTFFoneCliente">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Telefone"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTFCPFCliente4">
+            <Component class="javax.swing.JTextField" name="jTFCPFCliente">
             </Component>
           </SubComponents>
         </Container>
