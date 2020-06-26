@@ -77,18 +77,16 @@ public class Cliente extends javax.swing.JFrame {
         jPanelConsulta = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTbConsulta = new javax.swing.JTable();
-        jBSelecionar = new javax.swing.JButton();
-        jBCancelar2 = new javax.swing.JButton();
         jTFPesquisarCliente = new javax.swing.JTextField();
         jBPesquisarCliente = new javax.swing.JButton();
         jCbTipo = new javax.swing.JComboBox<>();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenuConsulta = new javax.swing.JMenu();
-        jMenuItemClienteConsulta = new javax.swing.JMenuItem();
-        jMenuItemProdutoConsulta = new javax.swing.JMenuItem();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemClienteCadastro = new javax.swing.JMenuItem();
         jMenuItemProdutoCadastro = new javax.swing.JMenuItem();
+        jMenuConsulta = new javax.swing.JMenu();
+        jMenuItemClienteConsulta = new javax.swing.JMenuItem();
+        jMenuItemProdutoConsulta = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
 
         jInternalFrame1.setVisible(true);
@@ -161,6 +159,12 @@ public class Cliente extends javax.swing.JFrame {
         jLabel4.setText("Logradouro");
 
         jLabel5.setText("Telefone");
+
+        jTFCPFCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFCPFClienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelCadastroLayout = new javax.swing.GroupLayout(jPanelCadastro);
         jPanelCadastro.setLayout(jPanelCadastroLayout);
@@ -259,16 +263,12 @@ public class Cliente extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTbConsulta);
-
-        jBSelecionar.setText("Selecionar");
-        jBSelecionar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSelecionarActionPerformed(evt);
+        jTbConsulta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTbConsultaMouseClicked(evt);
             }
         });
-
-        jBCancelar2.setText("Cancelar");
+        jScrollPane1.setViewportView(jTbConsulta);
 
         jTFPesquisarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -304,11 +304,6 @@ public class Cliente extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jBPesquisarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 68, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelConsultaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jBSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBCancelar2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1))
                 .addContainerGap())
         );
@@ -321,15 +316,21 @@ public class Cliente extends javax.swing.JFrame {
                     .addComponent(jBPesquisarCliente)
                     .addComponent(jCbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(jPanelConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBSelecionar)
-                    .addComponent(jBCancelar2))
-                .addGap(85, 85, 85))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52))
         );
 
         jTbPainel.addTab("Consulta", jPanelConsulta);
+
+        jMenuCadastro.setText("Cadastro");
+
+        jMenuItemClienteCadastro.setText("Cliente");
+        jMenuCadastro.add(jMenuItemClienteCadastro);
+
+        jMenuItemProdutoCadastro.setText("Produto");
+        jMenuCadastro.add(jMenuItemProdutoCadastro);
+
+        jMenuBar1.add(jMenuCadastro);
 
         jMenuConsulta.setText("Consulta");
 
@@ -345,16 +346,6 @@ public class Cliente extends javax.swing.JFrame {
         jMenuConsulta.add(jMenuItemProdutoConsulta);
 
         jMenuBar1.add(jMenuConsulta);
-
-        jMenuCadastro.setText("Cadastro");
-
-        jMenuItemClienteCadastro.setText("Cliente");
-        jMenuCadastro.add(jMenuItemClienteCadastro);
-
-        jMenuItemProdutoCadastro.setText("Produto");
-        jMenuCadastro.add(jMenuItemProdutoCadastro);
-
-        jMenuBar1.add(jMenuCadastro);
 
         jMenuSair.setText("Sair");
         jMenuSair.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -374,7 +365,7 @@ public class Cliente extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTbPainel, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTbPainel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         setBounds(0, 0, 709, 380);
@@ -390,10 +381,6 @@ public class Cliente extends javax.swing.JFrame {
     private void jMenuItemProdutoConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoConsultaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemProdutoConsultaActionPerformed
-
-    private void jBSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSelecionarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBSelecionarActionPerformed
 
     private void jTFPesquisarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFPesquisarClienteActionPerformed
         // TODO add your handling code here:
@@ -499,6 +486,23 @@ public class Cliente extends javax.swing.JFrame {
        estadobotoes(0);
     }//GEN-LAST:event_jBCancelarActionPerformed
 
+    private void jTFCPFClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFCPFClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFCPFClienteActionPerformed
+
+    private void jTbConsultaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTbConsultaMouseClicked
+      if (evt.getClickCount() == 2) {
+          int linha = jTbConsulta.getSelectedRow();
+          
+          String codigo = (String) jTbConsulta.getValueAt(linha, 0);
+          modcliente.setIdpessoa(Integer.parseInt(codigo));
+          daocliente.retornadados(modcliente);
+          getcomp();
+          jTbPainel.setSelectedIndex(0);
+      }
+        
+    }//GEN-LAST:event_jTbConsultaMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -538,12 +542,10 @@ public class Cliente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBAlterar;
     private javax.swing.JButton jBCancelar;
-    private javax.swing.JButton jBCancelar2;
     private javax.swing.JButton jBExcluir;
     private javax.swing.JButton jBGravar;
     private javax.swing.JButton jBNovo;
     private javax.swing.JButton jBPesquisarCliente;
-    private javax.swing.JButton jBSelecionar;
     private javax.swing.JComboBox<String> jCbTipo;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
