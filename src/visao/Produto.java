@@ -315,13 +315,13 @@ public class Produto extends javax.swing.JFrame {
     }//GEN-LAST:event_jTFCodigoProdutoActionPerformed
 
     private void jBNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNovoActionPerformed
-        // TODO add your handling code here:
+      
         estado = Rotinas.INCLUIR;
         estadobotoes (1);
     }//GEN-LAST:event_jBNovoActionPerformed
 
     private void jBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlterarActionPerformed
-        // TODO add your handling code here:
+       
         estado = Rotinas.ALTERAR;
         estadobotoes (1);
     }//GEN-LAST:event_jBAlterarActionPerformed
