@@ -15,7 +15,7 @@ public class ProdutoModelo {
     private String modelo;
     private int aro;
     private int marchas;
-    private float valor;
+    private int valor;
     private String descricao;
     private String categoria;
 
@@ -65,15 +65,15 @@ public class ProdutoModelo {
         return marchas;
     }
 
-    public void setMarchas(int Marchas) {
+    public void setMarchas(int marchas) {
         this.marchas = marchas;
     }
     
-     public float getValor() {
+     public int getValor() {
         return valor;
     }
 
-    public void setValor(float valor) {
+    public void setValor(int valor) {
         this.valor = valor;
     }
     

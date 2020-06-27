@@ -125,7 +125,7 @@ public class ProdutoControle extends ConexaoPostgress{
     }
 
     public void retornadados(ProdutoModelo produto) {
-        super.executeSQL("SELECT * FROM cat_produto WHERE "
+        super.executeSQL("SELECT * FROM produto WHERE "
                 + " id_produto = " + produto.getIdproduto());
         try {
             super.resultset.first();
@@ -134,7 +134,7 @@ public class ProdutoControle extends ConexaoPostgress{
             produto.setModelo(resultset.getString("modelo"));
             produto.setAro(resultset.getInt("aro"));
             produto.setMarchas(resultset.getInt("marchas"));
-            produto.setValor(resultset.getFloat("valor"));
+            produto.setValor(resultset.getInt("valor"));
             produto.setDescricao(resultset.getString("descricao"));
             produto.setCategoria(resultset.getString("Categoria"));
         } catch (SQLException ex) {
