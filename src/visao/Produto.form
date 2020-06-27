@@ -22,7 +22,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Cadastro Produto"/>
+    <Property name="title" type="java.lang.String" value="GLG Bikes"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -201,7 +201,7 @@
           <SubComponents>
             <Component class="javax.swing.JToggleButton" name="jBCancelar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="CANCELAR"/>
+                <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBCancelarActionPerformed"/>
@@ -209,7 +209,7 @@
             </Component>
             <Component class="javax.swing.JToggleButton" name="jBGravar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="GRAVAR"/>
+                <Property name="text" type="java.lang.String" value="Gravar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBGravarActionPerformed"/>
@@ -217,7 +217,7 @@
             </Component>
             <Component class="javax.swing.JToggleButton" name="jBExcluir">
               <Properties>
-                <Property name="text" type="java.lang.String" value="EXCLUIR"/>
+                <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBExcluirActionPerformed"/>
@@ -225,7 +225,7 @@
             </Component>
             <Component class="javax.swing.JToggleButton" name="jBAlterar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="ALTERAR"/>
+                <Property name="text" type="java.lang.String" value="Alterar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBAlterarActionPerformed"/>
@@ -233,7 +233,7 @@
             </Component>
             <Component class="javax.swing.JToggleButton" name="jBNovo">
               <Properties>
-                <Property name="text" type="java.lang.String" value="NOVO"/>
+                <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNovoActionPerformed"/>
