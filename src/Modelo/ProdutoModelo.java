@@ -12,7 +12,12 @@ package Modelo;
 public class ProdutoModelo {
     private int id_cat_produto;
     private String nome;
+    private String modelo;
+    private int aro;
+    private int marchas;
+    private float valor;
     private String descricao;
+    private String categoria;
 
     
     
@@ -38,6 +43,46 @@ public class ProdutoModelo {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+    
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo (String modelo) {
+        this.modelo = modelo;
+    }
+    
+     public int getAro() {
+        return aro;
+    }
+
+    public void setAro (int aro) {
+        this.aro = aro;
+    }
+    
+     public int getMarchas() {
+        return marchas;
+    }
+
+    public void setMarchas(int Marchas) {
+        this.marchas = marchas;
+    }
+    
+     public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
+    
+     public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 }
 

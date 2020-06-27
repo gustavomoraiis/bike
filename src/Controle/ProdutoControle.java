@@ -21,74 +21,122 @@ public class ProdutoControle extends ConexaoPostgress{
 
     
     public ResultSet consultageral() {
-        super.executeSQL("SELECT * FROM cat_produto");
+        super.executeSQL("SELECT * FROM produto");
         return super.resultset;
     }
     
     public ResultSet consultaid(ProdutoModelo produto) {
-        super.executeSQL("SELECT * FROM cat_produto WHERE "
-                + " id_cat_produto = " + produto.getIdproduto());
+        super.executeSQL("SELECT * FROM produto WHERE "
+                + " id_produto = " + produto.getIdproduto());
         return super.resultset;
     }
 
     public ResultSet consultanome(ProdutoModelo produto) {
-        super.executeSQL("SELECT * FROM cat_produto WHERE "
+        super.executeSQL("SELECT * FROM produto WHERE "
                 + " nome LIKE '%" + produto.getNome()
                 + "%'");
         return super.resultset;
     }
-
+     public ResultSet consultamodelo(ProdutoModelo produto) {
+        super.executeSQL("SELECT * FROM produto WHERE "
+                + " modelo LIKE '%" + produto.getModelo()
+                + "%'");
+        return super.resultset;
+    }
+       public ResultSet consultaaro(ProdutoModelo produto) {
+        super.executeSQL("SELECT * FROM produto WHERE "
+                + " aro LIKE '%" + produto.getAro()
+                + "%'");
+        return super.resultset;
+    }
+       public ResultSet consultamarchas(ProdutoModelo produto) {
+        super.executeSQL("SELECT * FROM produto WHERE "
+                + " marchas LIKE '%" + produto.getMarchas()
+                + "%'");
+        return super.resultset;
+    }
+        public ResultSet consultavalor(ProdutoModelo produto) {
+        super.executeSQL("SELECT * FROM produto WHERE "
+                + " valor LIKE '%" + produto.getValor()
+                + "%'");
+        return super.resultset;
+    }
     public ResultSet consultadescricao(ProdutoModelo produto) {
-        super.executeSQL("SELECT * FROM cat_produto WHERE "
+        super.executeSQL("SELECT * FROM produto WHERE "
                 + " descricao LIKE '%" + produto.getDescricao()
                 + "%'");
         return super.resultset;
     }
-
+    public ResultSet consultacategoria(ProdutoModelo produto) {
+        super.executeSQL("SELECT * FROM produto WHERE "
+                + " categoria LIKE '%" + produto.getCategoria()
+                + "%'");
+        return super.resultset;
+    }
     
     
     
 
-    public void incluir(ProdutoModelo cliente) {
-        cliente.setIdproduto(super.ultimasequencia("cat_produto", "id_cat_produto"));
+    public void incluir(ProdutoModelo produto) {
+        produto.setIdproduto(super.ultimasequencia("produto", "id_produto"));
         sql.delete(0, sql.length());
-        sql.append("INSERT INTO cat_produto (");
-        sql.append("id_cat_produto,");
+        sql.append("INSERT INTO produto (");
+        sql.append("id_produto,");
         sql.append("nome,");
-        sql.append("descricao");
+        sql.append("modelo,");
+        sql.append("aro,");
+        sql.append("marchas,");
+        sql.append("valor,");
+        sql.append("descricao,");
+        sql.append("categoria");
         sql.append(") VALUES (");
-        sql.append(cliente.getIdproduto()).append(",'");
-        sql.append(cliente.getNome()).append("','");
-        sql.append(cliente.getDescricao()).append("')");
+        sql.append(produto.getIdproduto()).append(",'");
+        sql.append(produto.getNome()).append("','");
+        sql.append(produto.getModelo()).append("','");
+        sql.append(produto.getAro()).append("','");
+        sql.append(produto.getMarchas()).append("','");
+        sql.append(produto.getValor()).append("','");
+        sql.append(produto.getDescricao()).append("','");
+        sql.append(produto.getCategoria()).append("')");
         super.atualizarSQL(sql.toString());
     }
 
     public void alterar(ProdutoModelo produto) {
         sql.delete(0, sql.length());
-        sql.append("UPDATE cat_produto SET ");
+        sql.append("UPDATE produto SET ");
         sql.append("nome = '").append(produto.getNome()).append("', ");
-        sql.append("descricao = '").append(produto.getDescricao()).append("' ");
+        sql.append("modelo = '").append(produto.getModelo()).append("', ");
+        sql.append("aro = '").append(produto.getAro()).append("', ");
+        sql.append("marchas = '").append(produto.getMarchas()).append("', ");
+        sql.append("valor = '").append(produto.getValor()).append("', ");
+        sql.append("descricao = '").append(produto.getDescricao()).append("', ");
+        sql.append("categoria = '").append(produto.getCategoria()).append("' ");
         sql.append(" WHERE ");
-        sql.append("id_cat_produto = ").append(produto.getIdproduto());
+        sql.append("id_produto = ").append(produto.getIdproduto());
         super.atualizarSQL(sql.toString());
     }
 
     public void excluir(ProdutoModelo produto) {
         sql.delete(0, sql.length());
-        sql.append("DELETE FROM cat_produto ");
+        sql.append("DELETE FROM produto ");
         sql.append(" WHERE ");
-        sql.append("id_cat_produto = ").append(produto.getIdproduto());
+        sql.append("id_produto = ").append(produto.getIdproduto());
         super.atualizarSQL(sql.toString());
     }
 
     public void retornadados(ProdutoModelo produto) {
         super.executeSQL("SELECT * FROM cat_produto WHERE "
-                + " id_cat_produto = " + produto.getIdproduto());
+                + " id_produto = " + produto.getIdproduto());
         try {
             super.resultset.first();
-            produto.setIdproduto(resultset.getInt("id_cat_produto"));
+            produto.setIdproduto(resultset.getInt("id_produto"));
             produto.setNome(resultset.getString("nome"));
+            produto.setModelo(resultset.getString("modelo"));
+            produto.setAro(resultset.getInt("aro"));
+            produto.setMarchas(resultset.getInt("marchas"));
+            produto.setValor(resultset.getFloat("valor"));
             produto.setDescricao(resultset.getString("descricao"));
+            produto.setCategoria(resultset.getString("Categoria"));
         } catch (SQLException ex) {
             System.out.println(ex);
         }
