@@ -65,37 +65,37 @@ public class Produto extends javax.swing.JFrame {
         jMenuSair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Cadastro Produto");
+        setTitle("GLG Bikes");
 
-        jBCancelar.setText("CANCELAR");
+        jBCancelar.setText("Cancelar");
         jBCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBCancelarActionPerformed(evt);
             }
         });
 
-        jBGravar.setText("GRAVAR");
+        jBGravar.setText("Gravar");
         jBGravar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBGravarActionPerformed(evt);
             }
         });
 
-        jBExcluir.setText("EXCLUIR");
+        jBExcluir.setText("Excluir");
         jBExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBExcluirActionPerformed(evt);
             }
         });
 
-        jBAlterar.setText("ALTERAR");
+        jBAlterar.setText("Alterar");
         jBAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBAlterarActionPerformed(evt);
             }
         });
 
-        jBNovo.setText("NOVO");
+        jBNovo.setText("Novo");
         jBNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBNovoActionPerformed(evt);
