@@ -136,7 +136,7 @@ public class ProdutoControle extends ConexaoPostgress{
             produto.setMarchas(resultset.getInt("marchas"));
             produto.setValor(resultset.getInt("valor"));
             produto.setDescricao(resultset.getString("descricao"));
-            produto.setCategoria(resultset.getString("Categoria"));
+            produto.setCategoria(resultset.getString("categoria"));
         } catch (SQLException ex) {
             System.out.println(ex);
         }
