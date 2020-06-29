@@ -315,7 +315,7 @@ public class Produto extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false, false, false
@@ -449,7 +449,7 @@ public class Produto extends javax.swing.JFrame {
 
     private void jBPesquisarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPesquisarProdutoActionPerformed
         // TODO add your handling code here:
-        preencher.FormatarJtable(jTbConsulta, new int[]{10, 75, 75, 10, 10, 15, 200, 300});
+        preencher.FormatarJtable(jTbConsulta, new int[]{10, 75, 75, 10, 10, 15, 300, 300});
 
         switch (jCbTipo.getSelectedIndex()) {
             case 0: {
@@ -480,21 +480,21 @@ public class Produto extends javax.swing.JFrame {
                 break;
             }
             case 4: {
-                 modproduto.setAro(Integer.parseInt(jTFPesquisarProduto.getText()));
+                 modproduto.setAro(jTFPesquisarProduto.getText());
                 preencher.PreencherJtableGenerico(jTbConsulta,
                        new String[]{"id_produto", "nome","modelo","aro", "marchas","valor","descricao", "categoria"},
                         daoproduto.consultaaro(modproduto));
                 break;
             }
             case 5: {
-                modproduto.setMarchas(Integer.parseInt(jTFPesquisarProduto.getText()));
+                modproduto.setMarchas(jTFPesquisarProduto.getText());
                 preencher.PreencherJtableGenerico(jTbConsulta,
                        new String[]{"id_produto", "nome","modelo","aro", "marchas","valor","descricao", "categoria"},
                         daoproduto.consultamarchas(modproduto));
                 break;
             }
              case 6: {
-                 modproduto.setValor(Integer.parseInt(jTFPesquisarProduto.getText()));
+                 modproduto.setValor(jTFPesquisarProduto.getText());
                 preencher.PreencherJtableGenerico(jTbConsulta,
                        new String[]{"id_produto", "nome","modelo","aro", "marchas","valor","descricao", "categoria"},
                         daoproduto.consultavalor(modproduto));
@@ -670,10 +670,10 @@ public class Produto extends javax.swing.JFrame {
         }
         modproduto.setNome(jTFNomeProduto.getText());
         modproduto.setModelo(jTFModeloProduto.getText());
-        modproduto.setAro(Integer.parseInt(jTFAroProduto.getText()));
-        modproduto.setMarchas(Integer.parseInt(jTFMarchasProduto.getText()));
-        modproduto.setValor(Integer.parseInt(jTFValorProduto.getText()));
-        modproduto.setDescricao(jTFAroProduto.getText());
+        modproduto.setAro(jTFAroProduto.getText());
+        modproduto.setMarchas(jTFMarchasProduto.getText());
+        modproduto.setValor(jTFValorProduto.getText());
+        modproduto.setDescricao(jTFDescricaoProduto.getText());
         modproduto.setCategoria(jTFCategoriaProduto.getText());
        
     }
@@ -682,10 +682,10 @@ public class Produto extends javax.swing.JFrame {
         jTFCodigoProduto.setText(Integer.toString(modproduto.getIdproduto()));
         jTFNomeProduto.setText(modproduto.getNome());
         jTFModeloProduto.setText(modproduto.getModelo());
-        jTFAroProduto.setText(Integer.toString(modproduto.getAro()));
-        jTFMarchasProduto.setText(Integer.toString(modproduto.getMarchas()));
-        jTFValorProduto.setText(Integer.toString(modproduto.getValor()));
-        jTFAroProduto.setText(modproduto.getDescricao());
+        jTFAroProduto.setText(modproduto.getAro());
+        jTFMarchasProduto.setText(modproduto.getMarchas());
+        jTFValorProduto.setText(modproduto.getValor());
+        jTFDescricaoProduto.setText(modproduto.getDescricao());
         jTFCategoriaProduto.setText(modproduto.getCategoria());
     }
 }

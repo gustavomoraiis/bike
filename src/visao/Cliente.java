@@ -263,6 +263,7 @@ public class Cliente extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTbConsulta.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jTbConsulta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTbConsultaMouseClicked(evt);

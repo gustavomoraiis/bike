@@ -132,9 +132,9 @@ public class ProdutoControle extends ConexaoPostgress{
             produto.setIdproduto(resultset.getInt("id_produto"));
             produto.setNome(resultset.getString("nome"));
             produto.setModelo(resultset.getString("modelo"));
-            produto.setAro(resultset.getInt("aro"));
-            produto.setMarchas(resultset.getInt("marchas"));
-            produto.setValor(resultset.getInt("valor"));
+            produto.setAro(resultset.getString("aro"));
+            produto.setMarchas(resultset.getString("marchas"));
+            produto.setValor(resultset.getString("valor"));
             produto.setDescricao(resultset.getString("descricao"));
             produto.setCategoria(resultset.getString("categoria"));
         } catch (SQLException ex) {

@@ -416,9 +416,9 @@
                         <Column editable="false" title="C&#xf3;digo" type="java.lang.Integer"/>
                         <Column editable="false" title="Nome Produto" type="java.lang.String"/>
                         <Column editable="false" title="Modelo" type="java.lang.String"/>
-                        <Column editable="false" title="Aro" type="java.lang.Integer"/>
+                        <Column editable="false" title="Aro" type="java.lang.String"/>
                         <Column editable="false" title="Marchas" type="java.lang.String"/>
-                        <Column editable="false" title="Valor" type="java.lang.Float"/>
+                        <Column editable="false" title="Valor" type="java.lang.String"/>
                         <Column editable="false" title="Categoria" type="java.lang.String"/>
                         <Column editable="false" title="Descri&#xe7;&#xe3;o" type="java.lang.String"/>
                       </Table>
