@@ -128,7 +128,7 @@ public class Produto extends javax.swing.JFrame {
             }
         });
 
-        jLDrecricao.setText("Drecrição Produto");
+        jLDrecricao.setText("Descrição Produto");
 
         jTFAroProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
