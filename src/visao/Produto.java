@@ -13,7 +13,6 @@ import ferramentas.Rotinas;
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author junio
  */
 public class Produto extends javax.swing.JFrame {
