@@ -126,7 +126,13 @@ public class Pedido extends javax.swing.JFrame {
 
         jLabel1.setText("Código Pedido");
 
-        jCBCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jTFCodigoPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFCodigoPedidoActionPerformed(evt);
+            }
+        });
+
+        jCBCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pedro Fuska" }));
         jCBCliente.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
             }
@@ -146,7 +152,7 @@ public class Pedido extends javax.swing.JFrame {
 
         jLabel3.setText("Código Produto");
 
-        jCBProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCBProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bicicleta KSW" }));
         jCBProduto.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
             }
@@ -233,13 +239,10 @@ public class Pedido extends javax.swing.JFrame {
                                 .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTFValorItem1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel4))
+                                .addGap(208, 208, 208)
                                 .addGroup(jPanelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanelCadastroLayout.createSequentialGroup()
-                                        .addGap(208, 208, 208)
-                                        .addComponent(jLabel6))
-                                    .addGroup(jPanelCadastroLayout.createSequentialGroup()
-                                        .addGap(208, 208, 208)
-                                        .addComponent(jTFValorTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jLabel6)
+                                    .addComponent(jTFValorTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 31, Short.MAX_VALUE))))
             .addGroup(jPanelCadastroLayout.createSequentialGroup()
                 .addGap(117, 117, 117)
@@ -452,43 +455,15 @@ public class Pedido extends javax.swing.JFrame {
         switch (jCbTipo.getSelectedIndex()) {
             case 0: {
                 preencher.PreencherJtableGenerico(jTbConsulta,
-                        new String[]{"id_pessoa", "nome", "cpf", "logradouro", "fone"},
+                        new String[]{"id_pedido", "Id_produto", "Id_cad_pessoa", "valor_item", "qtd_item"},
                         daopedido.consultageral());
                 break;
             } 
             case 1: {
                 modpedido.setIdpedido(Integer.parseInt(jTFPesquisarPedido.getText()));
                 preencher.PreencherJtableGenerico(jTbConsulta,
-                        new String[]{"id_pessoa", "nome", "cpf", "logradouro", "fone"},
+                        new String[]{"id_pedido", "Id_produto", "Id_cad_pessoa", "valor_item", "qtd_item"},
                         daopedido.consultaid(modpedido));
-                break;
-            }
-            case 2: {
-                modcliente.setNome(jTFPesquisarPedido.getText());
-                preencher.PreencherJtableGenerico(jTbConsulta,
-                       new String[]{"id_pessoa", "nome", "cpf", "logradouro", "fone"},
-                        daocliente.consultanome(modcliente));
-                break;
-            }
-            case 3: {
-                modcliente.setCpf(jTFPesquisarPedido.getText());
-                preencher.PreencherJtableGenerico(jTbConsulta,
-                       new String[]{"id_pessoa", "nome", "cpf", "logradouro", "fone"},
-                        daocliente.consultacpf(modcliente));
-                break;
-            }
-            case 4: {
-                modcliente.setLogradouro(jTFPesquisarPedido.getText());
-                preencher.PreencherJtableGenerico(jTbConsulta,
-                       new String[]{"id_pessoa", "nome", "cpf", "logradouro", "fone"},
-                        daocliente.consultalogradouro(modcliente));
-                break;
-            }
-            case 5: {
-                modcliente.setFone(jTFPesquisarPedido.getText());
-                preencher.PreencherJtableGenerico(jTbConsulta,
-                       new String[]{"id_pessoa", "nome", "cpf", "logradouro", "fone"},
-                        daocliente.consultafone(modcliente));
                 break;
             }
         }
@@ -509,32 +484,33 @@ public class Pedido extends javax.swing.JFrame {
     }//GEN-LAST:event_jBAlterarActionPerformed
 
     private void jBExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExcluirActionPerformed
-                if (jTFNomeCliente.getText().equals("")) {
+                if (jTFQuantidade.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Selecione um registro a ser excluido");
             return;
         } else {
             setcomp();
-            daocliente.excluir(modcliente);
+            daopedido.excluir(modpedido);
             jTFCodigoPedido.setText("");
-            jTFNomeCliente.setText("");
-            jTFCPFCliente.setText("");
-            jTFLogradouroCliente.setText("");
-            jTFFoneCliente.setText("");
+            jTFCodigoCliente.setText("");
+            jTFCodigoProduto.setText("");
+            jTFValorItem1.setText("");
+            jTFQuantidade.setText("");
+            jTFValorTotal.setText("");
         }
     }//GEN-LAST:event_jBExcluirActionPerformed
 
     private void jBGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGravarActionPerformed
-        if (jTFNomeCliente.getText().equals("")) {
+        if (jTFQuantidade.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Descrição Obrigatoria");
-            jTFNomeCliente.grabFocus();
+            jTFQuantidade.grabFocus();
             return;
         } else {
 
             setcomp();
             if (estado == Rotinas.INCLUIR) {
-                daocliente.incluir(modcliente);
+                daopedido.incluir(modpedido);
             } else if (estado == Rotinas.ALTERAR) {
-                daocliente.alterar(modcliente);
+                daopedido.alterar(modpedido);
             }
             getcomp();
             estadobotoes(0);
@@ -550,8 +526,8 @@ public class Pedido extends javax.swing.JFrame {
           int linha = jTbConsulta.getSelectedRow();
           
           String codigo = (String) jTbConsulta.getValueAt(linha, 0);
-          modcliente.setIdpessoa(Integer.parseInt(codigo));
-          daocliente.retornadados(modcliente);
+          modpedido.setIdpedido(Integer.parseInt(codigo));
+          daopedido.retornadados(modpedido);
           getcomp();
           jTbPainel.setSelectedIndex(0);
       }
@@ -573,6 +549,10 @@ public class Pedido extends javax.swing.JFrame {
      int linha = jCBProduto.getSelectedIndex();   
      jTFCodigoCliente.setText(codpedido[linha]);
     }//GEN-LAST:event_jCBProdutoPopupMenuWillBecomeInvisible
+
+    private void jTFCodigoPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFCodigoPedidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFCodigoPedidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -673,21 +653,24 @@ public class Pedido extends javax.swing.JFrame {
 
     public void setcomp() {
         if (estado == Rotinas.ALTERAR) {
-            modpedido.setIdpessoa(Integer.parseInt(jTFCodigoPedido.getText()));
+            modpedido.setIdpedido(Integer.parseInt(jTFCodigoPedido.getText()));
         }
-        modcliente.setNome(jTFNomeCliente.getText());
-        modcliente.setCpf(jTFCPFCliente.getText());
-        modcliente.setLogradouro(jTFLogradouroCliente.getText());
-        modcliente.setFone(jTFFoneCliente.getText());
+        modpedido.setIdcliente(Integer.parseInt(jTFCodigoCliente.getText()));
+        modpedido.setIdproduto(Integer.parseInt(jTFCodigoProduto.getText()));
+        modpedido.setValorItem(Double.parseDouble(jTFValorItem1.getText()));
+        modpedido.setQtdItem(Integer.parseInt(jTFQuantidade.getText()));
+        modpedido.setValorTotal(Double.parseDouble(jTFValorTotal.getText()));
+         
        
     }
 
     public void getcomp() {
-        jTFCodigoPedido.setText(Integer.toString(modcliente.getIdpessoa()));
-        jTFNomeCliente.setText(modcliente.getNome());
-        jTFCPFCliente.setText(modcliente.getCpf());
-        jTFLogradouroCliente.setText(modcliente.getLogradouro());
-        jTFFoneCliente.setText(modcliente.getFone());
+        jTFCodigoPedido.setText(Integer.toString(modpedido.getIdpedido()));
+        jTFCodigoCliente.setText(Integer.toString(modpedido.getIdcliente()));
+        jTFCodigoProduto.setText(Integer.toString(modpedido.getIdcliente()));
+        jTFValorItem1.setText(Double.toString(modpedido.getValorItem()));
+        jTFQuantidade.setText(Integer.toString(modpedido.getQtdItem()));
+        jTFValorTotal.setText(Double.toString(modpedido.getValorTotal()));
     }
 
 }

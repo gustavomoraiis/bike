@@ -16,6 +16,7 @@ public class PedidoModelo {
     private int id_cad_pessoa;
     private double valor_item;
     private int qtd_item;
+    private double valor_total;
     
     
     public int getIdpedido() {
@@ -52,6 +53,14 @@ public class PedidoModelo {
     }
 
     public void setQtdItem (int qtd_item) {
+        this.qtd_item = qtd_item;
+    }
+    
+     public int getValorTotal () {
+        return qtd_item;
+    }
+
+    public void setValorTotal (double valor_total) {
         this.qtd_item = qtd_item;
     }
     
