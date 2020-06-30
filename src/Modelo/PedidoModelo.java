@@ -11,51 +11,43 @@ package Modelo;
  */
 public class PedidoModelo {
 
-    private int id_pessoa;
-    private String nome;
-    private String cpf;
-    private String logradouro;
-    private String fone;
+    private int id_pedido;
+    private int id_produto;
+    private int id_cad_pessoa;
+    private double valor_item;
+    private int qtd_item;
     
     
-    public int getIdpessoa() {
-        return id_pessoa;
+    public int getIdpedio() {
+        return id_pedido;
     }
 
-    public void setIdpessoa(int id_pessoa) {
-        this.id_pessoa = id_pessoa;
+    public void setIdpedido(int id_pedido) {
+        this.id_pedido = id_pedido;
     }
 
-    public String getNome() {
-        return nome;
+    public int getIdproduto() {
+        return id_produto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setIdproduto(int id_produto) {
+        this.id_produto = id_produto;
     }
     
-    public String getCpf() {
-        return cpf;
+    public double getValorItem () {
+        return valor_item;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setValorItem (double valor_item) {
+        this.valor_item = valor_item;
     }
 
-    public String getLogradouro() {
-        return logradouro;
+    public int getQtdItem () {
+        return qtd_item;
     }
 
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
+    public void setQtdItem (int qtd_item) {
+        this.qtd_item = qtd_item;
     }
-   
     
-    public String getFone() {
-        return fone;
-    }
-
-    public void setFone(String fone) {
-        this.fone = fone;
-    }
 }
