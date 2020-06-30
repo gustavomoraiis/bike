@@ -310,7 +310,7 @@ public class Produto extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Nome Produto", "Modelo", "Aro", "Marchas", "Valor", "Categoria", "Descrição"
+                "Código", "Nome Produto", "Modelo", "Aro", "Marchas", "Valor", "Descrição", "Categoria"
             }
         ) {
             Class[] types = new Class [] {

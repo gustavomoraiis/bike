@@ -673,7 +673,7 @@ public class Pedido extends javax.swing.JFrame {
 
     public void setcomp() {
         if (estado == Rotinas.ALTERAR) {
-            modcliente.setIdpessoa(Integer.parseInt(jTFCodigoPedido.getText()));
+            modpedido.setIdpessoa(Integer.parseInt(jTFCodigoPedido.getText()));
         }
         modcliente.setNome(jTFNomeCliente.getText());
         modcliente.setCpf(jTFCPFCliente.getText());

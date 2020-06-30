@@ -18,10 +18,9 @@ public class PedidoModelo {
     private int qtd_item;
     
     
-    public int getIdpedio() {
+    public int getIdpedido() {
         return id_pedido;
     }
-
     public void setIdpedido(int id_pedido) {
         this.id_pedido = id_pedido;
     }
@@ -29,9 +28,15 @@ public class PedidoModelo {
     public int getIdproduto() {
         return id_produto;
     }
-
     public void setIdproduto(int id_produto) {
         this.id_produto = id_produto;
+    }
+    
+    public int getIdcliente() {
+        return id_cad_pessoa;
+    }
+    public void setIdcliente(int id_cad_pessoa) {
+        this.id_cad_pessoa = id_cad_pessoa;
     }
     
     public double getValorItem () {

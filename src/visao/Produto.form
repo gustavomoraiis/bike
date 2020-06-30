@@ -419,8 +419,8 @@
                         <Column editable="false" title="Aro" type="java.lang.String"/>
                         <Column editable="false" title="Marchas" type="java.lang.String"/>
                         <Column editable="false" title="Valor" type="java.lang.String"/>
-                        <Column editable="false" title="Categoria" type="java.lang.String"/>
                         <Column editable="false" title="Descri&#xe7;&#xe3;o" type="java.lang.String"/>
+                        <Column editable="false" title="Categoria" type="java.lang.String"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
